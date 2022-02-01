@@ -15,7 +15,7 @@ struct BookDetails: View {
         else {
             ZStack{
                 VStack{
-                    CustomImage(imageURL: book?.thumbnail, height: 150, width: 150)
+                    CustomImage(imageURL: book?.buildThumbnailURL(), height: 300, width: 300)
                     Text("Pages: \(book?.pageCount ?? 0)")
                     Text("Description: \(book?.description ?? "")")
                 }
